@@ -1,5 +1,6 @@
 import string
-import httplib
+#import httplib ======> No compatible with python 3.x. It is replaced with the module "http.client"
+import http.client
 import sys
 import myparser
 import re

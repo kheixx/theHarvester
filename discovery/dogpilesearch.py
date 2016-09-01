@@ -1,4 +1,5 @@
-import httplib
+#import httplib
+import http.client
 import myparser
 import time
 import sys
@@ -33,7 +34,7 @@ class search_dogpile:
             self.do_search()
             time.sleep(1)
 
-            print "\tSearching " + str(self.counter) + " results..."
+            print ("\tSearching " + str(self.counter) + " results...")
             self.counter += 10
 
     def get_emails(self):

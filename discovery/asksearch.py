@@ -1,5 +1,6 @@
 import string
-import httplib
+#import httplib
+import http.client
 import sys
 import myparser
 import re
@@ -13,7 +14,7 @@ class search_ask:
         self.totalresults = ""
         self.server = "www.ask.com"
         self.hostname = "www.ask.com"
-        self.userAgent = "(Mozilla/5.0 (Windows; U; Windows NT 6.0;en-US; rv:1.9.2) Gecko/20100115 Firefox/3.6"
+        self.userAgent = "Mozilla/5.0 (Windows; U; Windows NT 6.0;en-US; rv:1.9.2) Gecko/20100115 Firefox/3.6"
         self.quantity = "100"
         self.limit = int(limit)
         self.counter = 0

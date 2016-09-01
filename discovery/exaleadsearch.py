@@ -1,5 +1,6 @@
 import string
-import httplib
+#import httplib
+import http.client
 import sys
 import myparser
 import re
@@ -58,7 +59,7 @@ class search_exalead:
         nextres = renext.findall(self.results)
         if nextres != []:
             nexty = "1"
-            print str(self.counter)
+            print (str(self.counter))
         else:
             nexty = "0"
         return nexty
@@ -79,7 +80,7 @@ class search_exalead:
         while self.counter <= self.limit:
             self.do_search()
             self.counter += 50
-            print "\tSearching " + str(self.counter) + " results..."
+            print ("\tSearching " + str(self.counter) + " results...")
 
     def process_files(self, files):
         while self.counter < self.limit:

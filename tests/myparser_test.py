@@ -2,7 +2,6 @@
 # Unit tests for myparser.py
 #
 import myparser
-
 import unittest
 
 class TestMyParser(unittest.TestCase):

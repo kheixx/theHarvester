@@ -1,5 +1,6 @@
 import string
-import httplib
+#import httplib
+import http.client
 import sys
 import myparser
 import re
@@ -78,7 +79,7 @@ class search_googleCSE:
             sys.stdout.write(ESC + '[2K' + ESC+'[G')
             sys.stdout.write("\r\t" + "Searching  " + str(self.counter+self.lowRange) + " results ..." )
             sys.stdout.flush()
-            #print "\tSearching " + str(self.counter+self.lowRange) + " results...\t\t\t\t\t\r"
+            #print ("\tSearching " + str(self.counter+self.lowRange) + " results...\t\t\t\t\t\r")
             if self.counter == 101:
                 self.counter = 1
                 self.lowRange +=100
@@ -98,4 +99,4 @@ class search_googleCSE:
             self.do_search_files(files)
             time.sleep(1)
             self.counter += 100
-            print "\tSearching " + str(self.counter) + " results..."
+            print ("\tSearching " + str(self.counter) + " results...")
